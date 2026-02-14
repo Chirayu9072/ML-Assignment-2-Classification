@@ -20,7 +20,6 @@ if uploaded_file is not None:
 
 st.write("Preview of dataset:", data.head())
 
-
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.model_selection import train_test_split
 
@@ -46,7 +45,6 @@ X_test = scaler.transform(X_test)
 
 st.write("Preprocessing complete. Training data shape:", X_train.shape)
 
-
 # --- Model Training & Evaluation ---
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
@@ -55,6 +53,12 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.ensemble import RandomForestClassifier
 from xgboost import XGBClassifier
 from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, recall_score, f1_score, matthews_corrcoef
+
+import joblib
+import os
+
+# Ensure model folder exists
+os.makedirs("model", exist_ok=True)
 
 models = {
     "Logistic Regression": LogisticRegression(max_iter=1000),
@@ -81,6 +85,10 @@ for name, model in models.items():
         "AUC": roc_auc_score(y_test, probs) if probs is not None else None
     }
     results.append(metrics)
+
+    # 🔽 Save trained model
+    filename = f"model/{name.replace(' ', '_').lower()}.pkl"
+    joblib.dump(model, filename)
 
 results_df = pd.DataFrame(results)
 st.write("Model Comparison Table", results_df)
