@@ -1,13 +1,8 @@
-# ML-Assignment-2-Classification.
-# ML-Assignment-2-Classification
-
 ## 📌 Problem Statement
 The objective of this project is to implement and evaluate multiple machine learning classification models on the **Adult Census Income Dataset**.  
 The task is to predict whether an individual's income exceeds $50K per year based on demographic and employment attributes.
 
 ---
-
-## 📂 Dataset Description [1 mark]
 - **Dataset:** Adult Census Income (UCI Machine Learning Repository)  
 - **Instances:** ~48,842  
 - **Features:** 14 attributes (categorical + numerical)  
@@ -19,8 +14,6 @@ The task is to predict whether an individual's income exceeds $50K per year base
   - Standard scaling applied to numerical features  
 
 ---
-
-## ⚙️ Models Used [6 marks]
 The following six models were implemented on the same dataset:
 1. Logistic Regression  
 2. Decision Tree Classifier  
@@ -28,7 +21,6 @@ The following six models were implemented on the same dataset:
 4. Naive Bayes Classifier (GaussianNB)  
 5. Random Forest (Ensemble)  
 6. XGBoost (Ensemble)  
-
 ---
 
 ## 📊 Comparison Table of Evaluation Metrics
@@ -45,7 +37,7 @@ The following six models were implemented on the same dataset:
 
 ---
 
-## 🔍 Observations [3 marks]
+
 | ML Model Name       | Observation about model performance |
 |---------------------|--------------------------------------|
 | Logistic Regression | Performs well on linear relationships; interpretable but less powerful on complex data. |
@@ -57,7 +49,6 @@ The following six models were implemented on the same dataset:
 
 ---
 
-## ▶️ How to Run
 1. Clone the repository:
    ```bash
    git clone https://github.com/<your-username>/ML-Assignment-2-Classification.git
