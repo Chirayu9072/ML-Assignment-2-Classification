@@ -1,4 +1,4 @@
-## 📌 Problem Statement
+## Problem Statement
 The objective of this project is to implement and evaluate multiple machine learning classification models on the **Adult Census Income Dataset**.  
 The task is to predict whether an individual's income exceeds $50K per year based on demographic and employment attributes.
 
